@@ -1,0 +1,27 @@
+<div id="main">
+  <div class="header">
+    <h1 class="header-main">Spacestagram</h1>
+    <p class="header-sub">Brought to you by Nasa's API, breathtaking nature photos.</p>
+  </div>
+  <div id="card">
+    <div id="image-wrapper">
+      <img id="image" [src]='data.hdurl' alt="Nasa">
+    </div>
+    <div class="footer">
+      <div class="description-heading-wrapper"><h3 id="description-heading">{{data.title}} {{data.date}}</h3></div>
+      <div class="description-wrapper"><p id="description">{{data.explanation}}</p></div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading">
+  <div class="d-flex justify-content-center centered-item">
+    <div class="spinner-border" id="bigger-width" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div id="overlay"></div>
+</div>
+
+
