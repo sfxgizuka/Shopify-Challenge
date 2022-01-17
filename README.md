@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installing Packages
 
-After cloning this project on your machine, run npm install to get the packages needed.
+After cloning this project on your machine, run `npm install` to get the packages needed.
 
 ## Development server
 
