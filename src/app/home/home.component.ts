@@ -9,6 +9,7 @@ import { ExpectedData } from '../enums/data.interface'
 })
 export class HomeComponent implements OnInit {
   loading: boolean = true;
+  clicked: boolean = false;
   data: ExpectedData = {}
   constructor( private nasaFetchService: NasaFetchService) { }
   ngOnInit(): void {
@@ -21,6 +22,19 @@ export class HomeComponent implements OnInit {
       this.data = data;
       console.log(this.data)
     });
+  }
+
+  likePhoto(){
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   var likeButton = document.getElementById('like-button');
+    //   likeButton.addEventListener('click', function() {
+    //     window.lb = likeButton;
+    //     likeButton.classList.toggle('selected');
+    //   });
+    // }, false);
+    // const likeButton = <HTMLElement>document.querySelector('like-button');
+    // likeButton.classList.toggle('selected');
+    this.clicked = !this.clicked;
   }
 
 }
